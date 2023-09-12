@@ -5,7 +5,6 @@ export default class Demo extends Phaser.Scene {
 
   plataformas !: Phaser.Physics.Arcade.StaticGroup
   cursors !: Phaser.Types.Input.Keyboard.CursorKeys
-  collerctStar !:
   player !: any
   stars !:any
   constructor() {
@@ -84,8 +83,6 @@ export default class Demo extends Phaser.Scene {
   
   });
   this.physics.add.collider(this.stars, this.plataformas);
-  
-  this.physics.add.overlap(this.player, this.stars, collectStar, null, this);
 
   
   }
